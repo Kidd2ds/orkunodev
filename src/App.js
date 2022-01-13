@@ -9,7 +9,7 @@ function Base64ToImage({ base64Input, setBase64Input }) {
             <TextArea rows={5} onChange={(e) => setBase64Input(e.currentTarget.value)} value={base64Input} placeholder="Enter base64 text" />
 
             <div className="img-container">
-                {base64Input !== "" ? <img className="base64-img" src={base64Input} /> : <h2>
+                {base64Input !== "" ? <img alt="base64-img" className="base64-img" src={base64Input} /> : <h2>
                     Decoded base64 image will be displayed here.
                 </h2>}
             </div>
@@ -45,7 +45,7 @@ function ImageToBase64({ imageInput, setImageInput }) {
                 <input className="btn-default" type='file' accept='image/jpg,image/png,image/jpeg' onChange={(e) => openFile(e)} />
             </div>
             <div className="img-container">
-                {imageInput !== "" ? <img className="base64-img" src={imageInput} /> : <h2>
+                {imageInput !== "" ? <img alt="base64-img" className="base64-img" src={imageInput} /> : <h2>
                     Encoded base64 image will be displayed here.
                 </h2>}
                 <div className="base64-result">
